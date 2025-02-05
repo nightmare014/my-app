@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
+
 const TodoList = () => {
     return (
         <ul>
@@ -11,22 +12,23 @@ const TodoList = () => {
     );
 };
 
-const AppHeader = () =>{
+const AppHeader = () => {
     return <h1>My Todo List</h1>;
 };
 
 const SearchPanel = () => {
     return <input placeholder="search" />;
-}
+};
 
 const App = () => {
     return (
         <div>
             <AppHeader />
             <SearchPanel />
-            <TodoList/>
+            <TodoList />
         </div>
     );
-}
-ReactDOM.render(<App />,
-    document.getElementById('root'));
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />); // Исправлено: передаем <App />, а не element
